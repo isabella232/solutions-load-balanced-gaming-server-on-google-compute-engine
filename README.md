@@ -49,7 +49,7 @@ Compute Engine.  By the combination of different technologies, it enables
 automatic scaling of Google Compute Engine instances.
 
 This sample uses [Grits](https://code.google.com/p/gritsgame/) as
-an game server example.
+a game server example.
 
 
 Setting Up the Sample
