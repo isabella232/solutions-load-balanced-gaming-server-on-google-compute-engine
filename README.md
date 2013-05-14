@@ -62,7 +62,7 @@ the sample applicaiton is retrieved/extracted.
 The final view of the directory will be as follows.
 
     Current Directory
-          |- load_balanced_game_server_on_compute_engine/
+          |- solutions-load-balanced-gaming-server-on-google-compute-engine-master/
                 |- static_files/
                 |- worker/
           |- gritsgame/
@@ -92,9 +92,9 @@ provide easier way to install it.
 We need slight modification to Grits so that both frontend and backend
 of grits work on the same Google Compute Engine instance.
 The sample application includes the patch file to apply to Grits package
-in `load_balanced_game_server_on_compute_engine` directory.
+in `solutions-load-balanced-gaming-server-on-google-compute-engine-master` directory.
 
-    patch -p0 < load_balanced_game_server_on_compute_engine/gritsgame.patch
+    patch -p0 < solutions-load-balanced-gaming-server-on-google-compute-engine-master/gritsgame.patch
     tar zcf gritsgame.tar.gz gritsgame
 
 
@@ -223,7 +223,7 @@ or download by command line.
 
 Set up the library in the sample application root directory.
 
-    (cd load_balanced_game_server_on_compute_engine; unzip ../google-api-python-client-gae-1.1.zip)
+    (cd solutions-load-balanced-gaming-server-on-google-compute-engine-master; unzip ../google-api-python-client-gae-1.1.zip)
 
 
 #### Set up Firewall on Google Compute Engine Network
@@ -243,7 +243,7 @@ The sample application can be deployed to App Engine now.
 The deployment is done by App Engine Launcher, or by appcfg.py command
 included in App Engine SDK.
 
-    appcfg.py [--oauth2] update load_balanced_game_server_on_compute_engine
+    appcfg.py [--oauth2] update solutions-load-balanced-gaming-server-on-google-compute-engine-master
 
 
 Verification
