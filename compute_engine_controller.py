@@ -64,9 +64,11 @@ class ComputeEngineController(object):
   PROJECT_ID = '{{{{ project_id }}}}'
   CLOUD_STORAGE_DIR = 'gs://{{{{ bucket }}}}'
 
-  COMPUTE_API_VERSION = 'v1beta14'
-  DEFAULT_ZONE = 'us-central1-a'
-  DEFAULT_IMAGE = 'gcel-12-04-v20130104'
+  COMPUTE_API_VERSION = 'v1beta15'
+  DEFAULT_ZONE = 'us-central1-b'
+  DEFAULT_IMAGE = 'debian-7-wheezy-v20130723'
+  DEFAULT_IMAGE_PROJECT = 'debian-cloud'
+
   DEFAULT_MACHINE_TYPE = 'n1-standard-1'
 
   INITIAL_CLUSTER_SIZE = 5
@@ -138,10 +140,12 @@ class ComputeEngineController(object):
         'kind': 'compute#instance',
         'name': instance_name,
         'zone': self._ApiUrl(paths=['zones', self.DEFAULT_ZONE]),
-        'image': self._ApiUrl('google', paths=['images', self.DEFAULT_IMAGE],
+        'image': self._ApiUrl(self.DEFAULT_IMAGE_PROJECT,
+                              paths=['images', self.DEFAULT_IMAGE],
                               is_global=True),
         'machineType': self._ApiUrl(
-            paths=['machineTypes', self.DEFAULT_MACHINE_TYPE], is_global=True),
+            paths=['zones', self.DEFAULT_ZONE,
+                   'machineTypes', self.DEFAULT_MACHINE_TYPE]),
         'networkInterfaces': [
             {
                 'kind': 'compute#networkInterface',

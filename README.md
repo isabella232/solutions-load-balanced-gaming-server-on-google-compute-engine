@@ -49,7 +49,14 @@ Compute Engine.  By the combination of different technologies, it enables
 automatic scaling of Google Compute Engine instances.
 
 This sample uses [Grits](https://code.google.com/p/gritsgame/) as
-a game server example.
+an game server example.
+
+This sample application uses Google App Engine, Google Compute Engine and
+Google Cloud Storage.  Google Compute Engine and Google Cloud Storage require
+billing set up on the project.  Please refer to the following links about
+how to activate
+[Google Cloud Storage](https://developers.google.com/storage/docs/signup) and
+[Google Compute Engine](https://developers.google.com/compute/docs/signup).
 
 
 Setting Up the Sample
@@ -131,13 +138,15 @@ uploaded to the Google Cloud Storage.
 
 Create Google Cloud Storage bucket and upload Grits, App Engine and Node.js
 packages there.  Google Compute Engine instances will download these packages
-from the bucket, and install them.
+from the bucket, and install them.  Make sure to have the Google Cloud Storage
+bucket in the same project as Google Compute Engine, so that Compute Engine
+instances can access the bucket without ACL configuration.
 
 You can either:
 
 * Use an existing bucket.
-* Create new bucket from
-[Google Cloud Storage Web UI](https://storage.cloud.google.com/).
+* Create new bucket from Google Cloud Storage Web UI.  Cloud Storage UI is
+accessible from [Google Cloud Console](https://cloud.google.com/console).
 * Use
 [gsutil command line tool](https://developers.google.com/storage/docs/gsutil).
 `gsutil mb <bucket name>`
@@ -234,7 +243,7 @@ access to TCP port 8000 to 20000 range.  The firewall can be created from
 "Networks" menu of Google Compute Engine Web UI.  The firewall may also be
 created by the following command.
 
-    gcutil addfirewall --project <project name> --allowed tcp:8000-20000 gritsgame
+    gcutil addfirewall --project <project ID> --allowed tcp:8000-20000 gritsgame
 
 
 #### Deploy
