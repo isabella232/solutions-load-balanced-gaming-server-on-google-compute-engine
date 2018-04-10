@@ -116,7 +116,7 @@ or the download can be performed by the following commands.
 If the system doesn't have `wget`, `curl` command can be used
 with -O option instead, as `curl -O <URL>`.
 
-    wget http://googleappengine.googlecode.com/files/google_appengine_1.7.5.zip
+    wget https://storage.googleapis.com/appengine-sdks/deprecated/175/google_appengine_1.7.5.zip
     wget http://nodejs.org/dist/v0.10.0/node-v0.10.0-linux-x64.tar.gz
 
 Note the sample uses App Engine development server as Grits game server
