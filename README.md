@@ -149,7 +149,7 @@ You can either:
 accessible from [Google Cloud Console](https://cloud.google.com/console).
 * Use
 [gsutil command line tool](https://developers.google.com/storage/docs/gsutil).
-`gsutil mb <bucket name>`
+`gsutil mb gs://<bucket name>`
 
 Upload packages to the Google Cloud Storage bucket.
 
