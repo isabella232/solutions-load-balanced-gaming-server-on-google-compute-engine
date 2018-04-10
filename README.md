@@ -228,7 +228,7 @@ Download google-api-python-client-gae-1.1.zip from
 [download page](http://code.google.com/p/google-api-python-client/downloads/list),
 or download by command line.
 
-    wget http://google-api-python-client.googlecode.com/files/google-api-python-client-gae-1.1.zip
+    wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/google-api-python-client/google-api-python-client-gae-1.1.zip
 
 Set up the library in the sample application root directory.
 
