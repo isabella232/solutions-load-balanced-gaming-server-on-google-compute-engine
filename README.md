@@ -208,7 +208,7 @@ Client ID and client secret can be set up from
 page of Google APIs Console.
 
 Choose "Web Application" as application type.  Set redirect URIs to
-`http://<application ID>.appspot.com/oauth2callback`.
+`https://<application ID>.appspot.com/oauth2callback`.
 
 Replace `client_id` and `client_secret` values in the parameter list of
 `OAuth2Decorator` in `handlers.py` with the actual values from
